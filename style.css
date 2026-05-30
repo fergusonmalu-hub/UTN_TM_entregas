@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --color-primary: #652bdf;
+    --color-secondary-light: #f0eafc;
+    --color-dark: #360c72;
+    --color-background: #fcfbff;
+    --color-darktext: #2b2b2b;
+    --color-lighttext: #6a6a6a;
+    --color-purewhite: #ffffff;
+    --color-shadow:#e7eaed;
+}
+body {
+    background-color: var(--color-background);
+    font-family: 'Inter', sans-serif;
+    vertical-align: baseline;
+}
+header {
+    background-color: var(--color-purewhite);
+    z-index: 99;
+    border-bottom: 1px solid var(--color-shadow);
+    position: sticky;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    min-height: 82px;
+}
+h2 {
+    color: var(--color-darktext);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 2.350rem; /*pq era la medida del sitio qunaue aqui no lo declaramos*/
+}
+h3 {
+    color: var(--color-darktext);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5em;
+} /* en el sitio eran variantes de h2 pero yo elijo llamrlos h3 x orden*/
+h4 {
+    color: var(--color-darktext);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+p {
+    color: var(--color-lighttext); /*aunque a veces cambia*/
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+.navlink4 { /*pq se ve igual que h4*/
+    color: var(--color-darktext);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 0 4px;
+    padding: 6px 24px;
+}
+.navlink4:hover {
+    color: var(--color-primary);
+    background-color: var(--color-secondary-light);
+}
+.headerwrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1022px;
+    margin: 0 auto;
+}
+
+
+.group-a {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border-right: 0.5px solid var(--color-lighttext);
+    padding-right: 20px;
+}
+.ulmenu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.ulmenudos {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    list-style: none;
+    margin-left: auto;
+}
+.btnhead1, .btnhead2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 0 4px;
+    padding: 10px 24px;
+    min-height: 41px;
+    min-width: 160px;
+}
+.btnhead1 {
+    border: 1px solid var(--color-primary);
+}
+.btnhead1:hover {
+    background-color: var(--color-secondary-light);}
+.btnhead2 {
+    background-color: var(--color-primary);
+    color: var(--color-purewhite);
+    border: 1px solid var(--color-primary);
+}
+.btnhead2:hover {
+    background-color: var(--color-secondary-light);
+    color: var(--color-primary);
+    border: solid 1px var(--color-primary);
+}
+/*aqui cambio al primer bloque*/
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1022px;
+    margin: 40px auto;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.articles {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1022px;
+    margin: 40px auto;
+}
+.articlelayout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--color-purewhite);
+}
+.simpleicon{
+    align-items: center;
+    background: var(--color-secondary-light);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+}
