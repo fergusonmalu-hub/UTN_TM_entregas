@@ -19,15 +19,20 @@ body {
     background-color: var(--color-background);
     font-family: 'Inter', sans-serif;
     vertical-align: baseline;
+    padding-top: 82px;
 }
 header {
     background-color: var(--color-purewhite);
     z-index: 99;
     border-bottom: 1px solid var(--color-shadow);
-    position: sticky;
-    padding-top: 16px;
+    position: fixed;
+    padding-top: 20px; /*en la pagina es 16 pero no funcionaba aca x el logo*/
     padding-bottom: 16px;
     min-height: 82px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
 }
 h2 {
     color: var(--color-darktext);
@@ -39,7 +44,7 @@ h3 {
     color: var(--color-darktext);
     font-size: 24px;
     font-weight: 600;
-    line-height: 1.5em;
+    line-height: 1.25em;
 } /* en el sitio eran variantes de h2 pero yo elijo llamrlos h3 x orden*/
 h4 {
     color: var(--color-darktext);
@@ -74,8 +79,6 @@ p {
     max-width: 1022px;
     margin: 0 auto;
 }
-
-
 .group-a {
     display: flex;
     flex-direction: row;
@@ -124,7 +127,7 @@ p {
     color: var(--color-primary);
     border: solid 1px var(--color-primary);
 }
-/*aqui cambio al primer bloque*/
+/*DIV ARTICULOS*/
 .bienvenida {
     display: flex;
     flex-direction: column;
@@ -132,27 +135,48 @@ p {
     max-width: 1022px;
     margin: 40px auto;
 }
+
 .title{
     display: flex;
     justify-content: center;
+    margin-bottom: 32px;
 }
 .articles {
     display: flex;
     flex-direction: row;
-    gap: 40px;
-    max-width: 1022px;
-    margin: 40px auto;
+    justify-content: space-between;
 }
 .articlelayout {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    align-items: flex-start;
+    gap: 16px;    
     background-color: var(--color-purewhite);
+    padding: 24px;
+    border-radius: 16px;
+    margin: 12px;
+    min-height: 184px;
+    transition: transform 0.3s ease-out; /*no entiendo pq no va directamente en hover*/
+    flex-grow: 1; /*esto lo copie del sitio para que los tres ocupen el mismo ancho*/
 }
-.simpleicon{
-    align-items: center;
-    background: var(--color-secondary-light);
+.articlelayout:hover {
+    transform: translateY(-5px);
+}
+.icono-back {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-primary);
+}
+.icono-back:hover {
+    fill: var(--color-dark);
+}
+.iconbkg {
+    width: 62px;
+    height: 62px;
+    background-color: var(--color-secondary-light);
     border-radius: 8px;
-    box-sizing: border-box;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+/*DIV COBROS*/
