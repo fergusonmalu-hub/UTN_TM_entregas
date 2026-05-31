@@ -34,6 +34,14 @@ header {
     left: 0;
     align-items: center;
 }
+footer {
+    background-color: var(--color-purewhite);
+    padding: 24px 0;
+    margin-top: 40px;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+}
 h2 {
     color: var(--color-darktext);
     font-size: 40px;
@@ -180,3 +188,110 @@ p {
     align-items: center;
 }
 /*DIV COBROS*/
+.parent-cobros {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    max-width: 1022px;
+    margin: 0 auto;
+}
+.singlecobro {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 32px;
+    align-items: center;
+    background-color: var(--color-purewhite);
+    padding: 24px;
+    border-radius: 16px;
+    background-color: var(--color-purewhite);
+}
+.text-cobro {
+    flex: 1; /*para que ocupe todo el espacio disponible*/
+    gap: 21px;
+    display: flex; /*sino no se activa el gap*/
+    flex-direction: column;
+}
+.text-cobro p{
+    color: var(--color-darktext)
+}
+.imgcobro {
+    flex: 0 0 475px; /*no se mueve + tamano fijo*/
+    transition: transform 0.3s ease-out;
+}
+.imgcobro:hover {
+    transform: translateY(-5px);
+}
+.imgcobro img {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+    display: block;
+}
+.imgcobrodos{
+    width: 475px;
+    height: 375px;
+    object-fit: cover;
+    display: block;
+}
+.sc-left {
+    flex-direction: row-reverse;
+}
+.link-cobro-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-dark);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    justify-content: flex-start;
+    padding: 14px 0;
+}
+.link-cobro-btn:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+/*FOOTER*/
+.links-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 1022px;
+    align-items: flex-start;
+    gap: 32px;
+    margin: 0 auto;
+    
+}
+.links-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.links-footer ul li {
+    margin: 8px 0;
+}
+
+.links-footer ul li a {
+    color: var(--color-darktext);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-decoration: none;
+}
+
+.links-footer ul li a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+.titleli {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-darktext);
+}
+footer > div {
+    max-width: 1022px;
+    margin: 0 auto; /*no funciona*/
+}
