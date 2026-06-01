@@ -19,28 +19,12 @@ body {
     background-color: var(--color-background);
     font-family: 'Inter', sans-serif;
     vertical-align: baseline;
-    padding-top: 82px;
-}
-header {
-    background-color: var(--color-purewhite);
-    z-index: 99;
-    border-bottom: 1px solid var(--color-shadow);
-    position: fixed;
-    padding-top: 20px; /*en la pagina es 16 pero no funcionaba aca x el logo*/
-    padding-bottom: 16px;
-    min-height: 82px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    align-items: center;
+    padding-top: 82px; /*para que el contenido no quede debajo del header fijo*/
 }
 footer {
     background-color: var(--color-purewhite);
     padding: 24px 0;
     margin-top: 40px;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
 }
 h2 {
     color: var(--color-darktext);
@@ -65,6 +49,25 @@ p {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5em;
+}
+.header-desktop{
+    background-color: var(--color-purewhite);
+    z-index: 99;
+    border-bottom: 1px solid var(--color-shadow);
+    position: fixed;
+    padding-top: 20px; /*en la pagina es 16 pero no funcionaba aca x el logo*/
+    padding-bottom: 16px;
+    min-height: 82px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+}
+.header-mobile {
+    display: none;
+}
+.burger-btn, .logo-header-mbl {
+    display: none;
 }
 .navlink4 { /*pq se ve igual que h4*/
     color: var(--color-darktext);
@@ -188,6 +191,11 @@ p {
     align-items: center;
 }
 /*DIV COBROS*/
+.cobros {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 .parent-cobros {
     display: flex;
     flex-direction: column;
@@ -273,7 +281,6 @@ p {
 .links-footer ul li {
     margin: 8px 0;
 }
-
 .links-footer ul li a {
     color: var(--color-darktext);
     font-size: 14px;
@@ -281,7 +288,6 @@ p {
     line-height: 1.5em;
     text-decoration: none;
 }
-
 .links-footer ul li a:hover {
     color: var(--color-primary);
     text-decoration: underline;
@@ -294,4 +300,71 @@ p {
 footer > div {
     max-width: 1022px;
     margin: 0 auto; /*no funciona*/
+}
+/*RESPONSIVE SOLO A MBL*/
+@media screen and (max-width: 480px) { /*pq screen?*/
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p{
+        font-size: 16px;
+    }
+  
+    .header-desktop {
+        display: none;
+    }
+    .header-mobile {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 72px; /*el valor del sitio pero no se pq se ve ms chico*/
+        background-color: var(--color-purewhite);
+        z-index: 99;
+        border-bottom: 1px solid var(--color-shadow);
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-mobile {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+    }
+    .burger-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    margin-right: auto;
+    position: relative;
+    }
+    .logo-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .logo-header-mbl {
+        height: 40px;
+        width: auto;
+        display: block;
+    }
+    /*BIENVENIDA*/
+    .bienvenida {
+    width: calc(100% - 48px);
+    }
+    .bienvenida h2 {
+        text-align: center;
+        justify-content: center;
+    }
 }
