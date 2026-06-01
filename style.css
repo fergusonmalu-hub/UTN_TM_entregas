@@ -262,7 +262,7 @@ p {
     color: var(--color-primary);
     text-decoration: underline;
 }
-/*FOOTER*/
+/*FOOTER*/ /*no use grid pq no lo vimos en clase*/
 .links-footer {
     display: flex;
     justify-content: space-evenly;
@@ -318,7 +318,7 @@ footer > div {
     footer {
         margin: 40px -12px; /*es esto una locura ?*/
         background-color: var(--color-purewhite);
-}
+    }
     h2 {
         font-size: 30px;
         line-height: 2.25rem;
@@ -430,5 +430,5 @@ footer > div {
     }
     .column-footer ul {
     min-width: 45%;
-}
+    }
 }
