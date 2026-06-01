@@ -421,6 +421,7 @@ footer > div {
     flex-direction: column;
     width: 100%;
     gap: 0px;
+    align-items: center;
     }
     .column-footer {
     display: flex;
@@ -429,6 +430,6 @@ footer > div {
     width: 100%;
     }
     .column-footer ul {
-    min-width: 45%;
+    width: 40%; /*no se si es lo mejor pero dado de que deberia ser grid y no lo vimos me lo permito :) */
     }
 }
