@@ -216,16 +216,16 @@ p {
     background-color: var(--color-purewhite);
 }
 .text-cobro {
-    flex: 1; /*para que ocupe todo el espacio disponible*/
+    flex: 1; /*para que ocupe todo el espacio disponible, esto lo investigue */
     gap: 21px;
-    display: flex; /*sino no se activa el gap*/
+    display: flex; /*dato para mi: sino no se activa el gap*/
     flex-direction: column;
 }
 .text-cobro p{
     color: var(--color-darktext)
 }
 .imgcobro {
-    flex: 0 0 475px; /*no se mueve + tamano fijo*/
+    flex: 0 0 475px; /* dato para mi : no se mueve + tamano fijo*/
     transition: transform 0.3s ease-out;
 }
 .imgcobro:hover {
@@ -310,13 +310,13 @@ footer > div {
     margin: 0 auto;
 }
 /*RESPONSIVE SOLO A MBL*/
-@media screen and (max-width: 480px) { /*pq screen?*/
+@media screen and (max-width: 480px) { /*dato para mi : pq screen?*/
     body {
         padding-left: 12px;
         padding-right: 12px; /*lo nombre asi para no mezclarlo con el de 82px del desktop*/
     }
     footer {
-        margin: 40px -12px; /*es esto una locura ?*/
+        margin: 40px -12px; /*es esto una locura ? No vimos grid, que es como etsa resuelto en la pagina oficial, entonces asumo que debo resolver con flex*/
         background-color: var(--color-purewhite);
     }
     h2 {
@@ -338,7 +338,7 @@ footer > div {
         top: 0;
         left: 0;
         width: 100%;
-        min-height: 72px; /*el valor del sitio pero no se pq se ve ms chico*/
+        min-height: 72px; 
         background-color: var(--color-purewhite);
         z-index: 99;
         border-bottom: 1px solid var(--color-shadow);
@@ -425,11 +425,11 @@ footer > div {
     }
     .column-footer {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*esto no lo vimos en clase pero lo busque*/
     justify-content: center;
     width: 100%;
     }
     .column-footer ul {
-    width: 40%; /*no se si es lo mejor pero dado de que deberia ser grid y no lo vimos me lo permito :) */
+    width: 40%; /*no se si es lo mejor pero dado de que deberia ser grid y no vimos grid en clase me lo permito :) */
     }
 }
